@@ -13,6 +13,6 @@ La idea de este programa es ayudar con experimentos de ciberseguridad que necesi
 
 ## ⚡ Características
 
-- 🔤 **ASCII**: codifica y decodifica imagenes de formato .jpg (`de momento`)
+- 🔤 **ASCII**: codifica y decodifica imagenes de formato .png (`de momento`)
 - 📄 **TXT**: Devuelve la codificación como un archivo .txt
 
