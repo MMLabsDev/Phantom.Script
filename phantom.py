@@ -61,21 +61,23 @@ while True:
     table()
     user = int(input("Select Funtion > "))
 
-    if user == 1:
-        ruta_imagen = input("Image route > ").strip().strip('"')
-        print("Do you wish a name for you .txt?")
-        print("[YES] / [NO]")
-        name = input("> ")
-        if name.lower() == "yes":
-            name = input("Chose a name for your .txt (is not necesary .txt)> ")
-            b64 = imagen_a_base64(
-                ruta_imagen,
-                f"{name}.txt")
-                    
-            print(f"Image {name} encoded ",b64[:50], "...")
-        else:
-            b64 = imagen_a_base64(ruta_imagen, "foto.txt")
-            print(f"Image encoded: {b64[:50]} ...")
+if user == 1:
+    ruta_imagen = input("Image route > ").strip().strip('"')
+    print("Do you wish a name for your .txt? [YES] / [NO]")
+    resp = input("> ").strip().lower()
+
+    if resp == "yes":
+        name = input("Choose a name for your .txt > ").strip()
+    else:
+        name = "foto"
+    if not name.lower().endswith(".txt"):
+        name += ".txt"
+
+    try:
+        b64 = imagen_a_base64(ruta_imagen, name)
+        print(f"Image encoded -> {name}\n{b64[:50]} ...")
+    except FileNotFoundError:
+        print("File not found. Check the route.")
 
     elif user == 2:
         ruta_txt = input("Base64 file route > ").strip().strip('"')
