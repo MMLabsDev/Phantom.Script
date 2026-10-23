@@ -47,9 +47,8 @@ def imagen_a_base64(ruta_imagen, ruta_salida_txt=None):
     codificado = base64.b64encode(datos_binarios)
     texto_base64 = codificado.decode("utf-8")
     if ruta_salida_txt:
-        with open(ruta_salida_txt, "w") as f:
-            f.write(texto_base64)
-    return texto_base64
+        with open(ruta_salida_txt, "w", encoding="utf-8") as f:
+        return texto_base64
 
 def base64_a_imagen(texto_base64, ruta_salida_imagen):
     datos_binarios = base64.b64decode(texto_base64)
@@ -63,7 +62,7 @@ while True:
     user = int(input("Select Funtion > "))
 
     if user == 1:
-        ruta_imagen = input("Image route > ")
+        ruta_imagen = input("Image route > ").strip().strip('"')
         print("Do you wish a name for you .txt?")
         print("[YES] / [NO]")
         name = input("> ")
@@ -75,19 +74,16 @@ while True:
                     
             print(f"Image {name} encoded ",b64[:50], "...")
         else:
-            b64 = imagen_a_base64(
-            r"C:\Users\MINEDUCYT\Pictures\Screenshots\Captura de pantalla 2026-08-07 120452.png",
-            "foto.txt")
-        
-            print(b64[:50], "...")
+            b64 = imagen_a_base64(ruta_imagen, "foto.txt")
+            print(f"Image encoded: {b64[:50]} ...")
 
     elif user == 2:
-        ruta_txt = input("Base64 file route > ")
+        ruta_txt = input("Base64 file route > ").strip().strip('"')
 
         with open(ruta_txt, "r", encoding="utf-8") as f:
             texto_leido = f.read()
 
-        ruta_salida = input("Output image route > ")
+        ruta_salida = input("Output image route > ").strip().strip('"')
         base64_a_imagen(texto_leido, ruta_salida)
 
         print("Image reconstructed successfully!")
