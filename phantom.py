@@ -48,7 +48,7 @@ def imagen_a_base64(ruta_imagen, ruta_salida_txt=None):
     texto_base64 = codificado.decode("utf-8")
     if ruta_salida_txt:
         with open(ruta_salida_txt, "w", encoding="utf-8") as f:
-        return texto_base64
+            return texto_base64
 
 def base64_a_imagen(texto_base64, ruta_salida_imagen):
     datos_binarios = base64.b64decode(texto_base64)
