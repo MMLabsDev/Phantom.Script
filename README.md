@@ -16,3 +16,11 @@ La idea de este programa es ayudar con experimentos de ciberseguridad que necesi
 - 🔤 **ASCII**: codifica y decodifica imagenes de formato .png (`de momento`)
 - 📄 **TXT**: Devuelve la codificación como un archivo .txt con nombre personalizado.
 
+## 📚​ Por qué lo hice? 
+
+- Me interesa aprender a codificar y decodificar datos, así como entender su mecanismo. 
+
+- Quiero contribuir a la comodidad de los trabajos de ciberseguridad qué llevan tareas repetitivas creando un programa que abarque todas mis herramientas creadas.
+
+- Para que principiantes de esta área puedan inspeccionar mi código y ver lo que se puede construir con programación. 
+
