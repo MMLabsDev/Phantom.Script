@@ -10,6 +10,10 @@ La idea de este programa es ayudar con experimentos de ciberseguridad que necesi
 > 🚧 **Estado:** Aún en desarrollo
 
 ---
+Vista previa:
+
+<img width="787" height="705" alt="image" src="https://github.com/user-attachments/assets/c29eb01f-fb97-441e-9d16-319e2a79dc29" />
+
 
 ## ⚡ Características
 
